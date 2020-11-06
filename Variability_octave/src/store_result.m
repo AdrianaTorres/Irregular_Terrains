@@ -11,6 +11,7 @@
 function is_ok = store_result(filename, pi, data, title)
 
     file_id = fopen(filename, "w");
+    fprintf(file_id, "type: 'labelled_matrix'\n");
     fprintf(file_id, pi);
     
     value_str = sprintf("[[%s], [", title);
