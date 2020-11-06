@@ -1,6 +1,6 @@
 #Walk ratio and ratio index calculation
 
-function RatioIndex_Calculation (file, outputFolder)
+function ratioIndex_calculation (file, outputFolder)
 
 data = read_simple_yaml(file);
 
