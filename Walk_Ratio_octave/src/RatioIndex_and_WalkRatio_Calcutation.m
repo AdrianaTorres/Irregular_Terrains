@@ -1,9 +1,6 @@
 #Walk ratio and ratio index calculation
 
-#Extract data from input.
-cd C:\Users\adria\Datos_Adriana\EUROBENCH\Octave;
-
-file = "GaitParameters_noExo.yaml";
+function WalkRatio_Calculation (file, outputFolder)
 
 data = read_simple_yaml(file);
 
@@ -49,22 +46,15 @@ gaitParameters = [left_cadence, left_walkingSpeed, left_strideTime, left_stepTim
 left_walkRatio = walkRatio(gaitParameters(6), gaitParameters(1));
 rigth_walkRatio = walkRatio(gaitParameters(14), gaitParameters(9));
 
-#Ratio index calculation.
-ratio_index = [];
-
-for i=1:((size(gaitParameters) (2) - 1)/2)
-    ratio_index = [ratio_index ratioIndex(gaitParameters(i), gaitParameters(i+8))];
-endfor
   
 #Put the results into a file.
 wr = "Walking ratio:\n";
-ri = "Ratio index:\n";
 wr_title = "'right', 'left'";
 wr_data = [rigth_walkRatio, left_walkRatio];
-ri_title = "'cadence', 'walking_speed', 'stride_time', 'step_time', 'stride_length', 'step_length', 'step_width', 'single_support'";
+
+cd (outputFolder);
 
 store_result("WalkingRatio.yaml", wr, wr_data, wr_title);
-store_result("RatioIndex.yaml", ri, ratio_index, ri_title);
 
 
 
