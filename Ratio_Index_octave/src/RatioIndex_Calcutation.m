@@ -1,6 +1,6 @@
 #Walk ratio and ratio index calculation
 
-function RatioIndex_and_WalkRatio_Calculation (file, outputFolder)
+function RatioIndex_Calculation (file, outputFolder)
 
 data = read_simple_yaml(file);
 
@@ -41,11 +41,6 @@ doubleSupport = str2double(doubleSupport);
 
 gaitParameters = [left_cadence, left_walkingSpeed, left_strideTime, left_stepTime, left_strideLength, left_stepLength, left_stepWidth, left_singleSupport, rigth_cadence,rigth_walkingSpeed, rigth_strideTime, rigth_stepTime, rigth_strideLength, rigth_stepLength, rigth_stepWidth, rigth_singleSupport, doubleSupport];
 
-
-#Walk ratio calculation.
-left_walkRatio = walkRatio(gaitParameters(6), gaitParameters(1));
-rigth_walkRatio = walkRatio(gaitParameters(14), gaitParameters(9));
-
 #Ratio index calculation.
 ratio_index = [];
 
@@ -54,15 +49,11 @@ for i=1:((size(gaitParameters) (2) - 1)/2)
 endfor
   
 #Put the results into a file.
-wr = "Walking ratio:\n";
 ri = "Ratio index:\n";
-wr_title = "'right', 'left'";
-wr_data = [rigth_walkRatio, left_walkRatio];
 ri_title = "'cadence', 'walking_speed', 'stride_time', 'step_time', 'stride_length', 'step_length', 'step_width', 'single_support'";
 
 cd (outputFolder);
 
-store_result("WalkingRatio.yaml", wr, wr_data, wr_title);
 store_result("RatioIndex.yaml", ri, ratio_index, ri_title);
 
 
