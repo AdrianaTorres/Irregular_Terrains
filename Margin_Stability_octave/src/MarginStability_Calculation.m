@@ -1,12 +1,6 @@
 #Margin of stability calculation
 
-#Extract data from input.
-cd C:\Users\adria\Datos_Adriana\EUROBENCH\Octave;
-
-file1 = "COM_plano01.csv";
-file2 = "gaitEvents_plano01.csv";
-file3 = "FeetTrajectories_plano01.csv";
-file4 = "Anthropometry.yaml";
+function MarginStability_Calculation (file1, file2, file3, file4, outputFolder)
 
 fid1 = fopen(file1, "r");
 fid2 = fopen(file2, "r");
@@ -178,6 +172,8 @@ leftPMoS = sum(leftPMoS)/length(leftPMoS)
 mos = "Margin of Stability:\n";
 mos_titles = "'Right Medial Margin of Stability', 'Right Lateral Margin of Stability', 'Right Anterior Margin of Stability', 'Right Posterior Margin of Stability', 'Left Medial Margin of Stability', 'Left Lateral Margin of Stability', 'Left Anterior Margin of Stability', 'Left Posterior Margin of Stability'";
 mos_vector = [rightMMoS, rightLMoS, rightAMoS, rightPMoS, leftMMoS, leftLMoS, leftAMoS, leftPMoS];
+
+cd (outputFolder);
 
 store_result("Margin_of_Stability.yaml", mos, mos_vector, mos_titles);
 
