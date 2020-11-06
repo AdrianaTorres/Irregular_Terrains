@@ -1,6 +1,6 @@
 #Walk ratio and ratio index calculation
 
-function WalkRatio_Calculation (file, outputFolder)
+function walkRatio_calculation (file, outputFolder)
 
 data = read_simple_yaml(file);
 
