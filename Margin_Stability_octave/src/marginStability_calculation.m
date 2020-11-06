@@ -1,6 +1,6 @@
 #Margin of stability calculation
 
-function MarginStability_Calculation (file1, file2, file3, file4, outputFolder)
+function marginStability_calculation (file1, file2, file3, file4, outputFolder)
 
 fid1 = fopen(file1, "r");
 fid2 = fopen(file2, "r");
