@@ -1,8 +1,8 @@
-# PI BEAT
+# Irregular Terrain Performance indicators
 
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) --> Don't know if this is the same for us.
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0).
 
-Copyright BEAT 2020
+Copyright CSIC 2020
 
 ## Purposes
 
@@ -23,76 +23,30 @@ pkg load io
 
 ## Usage
 
-### Protocol benchmark
+### from Octave
 
-The code enables scoring 1 protocol
+If octave is opened from the repository root, assuming we created before a folder named `output`:
 
-* Protocol 1.
-  * MarginStability_Calculation
-  * RatioIndex_and_WalkRatio_Calculation
-  * variability_calculation
-
-```shell
---> I've never run them with a shell, can you help me with this, please?
+```octave
+addpath("Margin_stability_octave/src")
+# For the Margin stability computation
+marginStability_calculation("Margin_Stability_octave/tests/data/input/COM_plano01.csv", "Margin_Stability_octave/tests/data/input/gaitEvents_plano01.csv", "Margin_Stability_octave/tests/data/input/FeetTrajectories_plano01.csv", "Margin_Stability_octave/tests/data/input/Anthropometry.yaml", "output")
 ```
 
-### Performance Indicator launch
-
-_marginStability_calculation_
-
-This routine computes the margin of stability at the moment heel strike occurs.
-Assuming folder `Outputs` exists:
-
-```console
---> Same than with shell. I write below what you ask me in the email
-name of the file in Github: marginStability_calculation 
-Required inputs: "COM_plano01.csv", "gaitEvents_plano01.csv", "FeetTrajectories_plano01.csv", "Anthropometry.yaml" and name of the folder to store the output.
-Example of function call in Octave: marginStability_calculation("COM_plano01.csv", "gaitEvents_plano01.csv", "FeetTrajectories_plano01.csv", "Anthropometry.yaml", "Outputs");
+```octave
+addpath("Walk_Ratio_octave/src")
+walkRatio_calculation("Walk_Ratio_octave/tests/data/input/GaitParameters_noExo.yaml", "output")
 ```
 
-_walkRatio_calculation_
-
-This routine computes the walk ratio.
-Assuming folder `Outputs` exists:
-
-```console
---> Same than with shell. I write below what you ask me in the email
-name of the file in Github: walkRatio_calculation 
-Required inputs: "GaitParameters_noExo.yaml" and name of the folder to store the output.
-Example of function call in Octave: walkRatio_calculation("GaitParameters_noExo.yaml", "Outputs");
+```octave
+addpath("Ratio_Index_octave/src/")
+ratioIndex_calcutation("Ratio_Index_octave/tests/data/input/GaitParameters_noExo.yaml", "output")
 ```
 
-_ratioIndex_calculation_
-
-This routine computes the ratio index.
-Assuming folder `Outputs` exists:
-
-```console
---> Same than with shell. I write below what you ask me in the email
-name of the file in Github: ratioIndex_calculation 
-Required inputs: "GaitParameters_noExo.yaml" and name of the folder to store the output.
-Example of function call in Octave: ratioIndex_calculation("GaitParameters_noExo.yaml", "Outputs");
+```octave
+addpath("Variability_octave/src/")
+variability_calculation("Variability_octave/tests/data/input/GaitParameters_exo.yaml", "Variability_octave/tests/data/input/GaitParameters_noExo.yaml")
 ```
-
-_variability_calculation_
-
-This routine computes the variability of gait parameters when wearing or not the exoskeleton.
-Assuming folder `Outputs` exists:
-
-```console
---> Same than with shell. I write below what you ask me in the email
-name of the file in Github: variability_calculation 
-Required inputs: "GaitParameters_exo.yaml", "GaitParameters_noExo.yaml" and name of the folder to store the output.
-Example of function call in Octave: variability_calculation("GaitParameters_exo.yaml", "GaitParameters_NoExo.yaml", "Outputs");
-```
-
-## Build docker image
-
---> Don't know how to do this
-
-## Launch the docker image
-
---> Don't know how to do this
 
 ## Acknowledgements
 
