@@ -94,7 +94,7 @@ endfor
 v = "Variability:\n";
 v_title = "'left_cadence', 'left_walking_speed', 'left_stride_time', 'left_step_time', 'left_stride_length', 'left_step_length', 'left_step_width', 'left_single_support', 'rigth_cadence', 'rigth_walking_speed', 'rigth_stride_time', 'rigth_step_time', 'rigth_stride_length', 'rigth_step_length', 'rigth_step_width', 'rigth_single_support'";
 
-cd outputFolder;
+filename = strcat(outputFolder, "/", "Variability", ".yaml")
 
-variability = store_result("Variability.yaml", v, variability_vector, v_title);
+variability = store_result(filename, v, variability_vector, v_title);
 

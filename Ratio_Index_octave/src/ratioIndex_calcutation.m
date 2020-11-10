@@ -47,14 +47,14 @@ ratio_index = [];
 for i=1:((size(gaitParameters) (2) - 1)/2)
     ratio_index = [ratio_index ratioIndex(gaitParameters(i), gaitParameters(i+8))];
 endfor
-  
+
 #Put the results into a file.
 ri = "Ratio index:\n";
 ri_title = "'cadence', 'walking_speed', 'stride_time', 'step_time', 'stride_length', 'step_length', 'step_width', 'single_support'";
 
-cd (outputFolder);
+filename = strcat(outputFolder, "/", "RatioIndex", ".yaml")
 
-store_result("RatioIndex.yaml", ri, ratio_index, ri_title);
+store_result(filename, ri, ratio_index, ri_title);
 
 
 
