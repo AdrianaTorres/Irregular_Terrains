@@ -173,14 +173,4 @@ mos = "Margin of Stability:\n";
 mos_titles = "'Right Medial Margin of Stability', 'Right Lateral Margin of Stability', 'Right Anterior Margin of Stability', 'Right Posterior Margin of Stability', 'Left Medial Margin of Stability', 'Left Lateral Margin of Stability', 'Left Anterior Margin of Stability', 'Left Posterior Margin of Stability'";
 mos_vector = [rightMMoS, rightLMoS, rightAMoS, rightPMoS, leftMMoS, leftLMoS, leftAMoS, leftPMoS];
 
-cd (outputFolder);
-
-store_result("Margin_of_Stability.yaml", mos, mos_vector, mos_titles);
-
-
-
-
-
-
-
-
+store_result(filename, mos, mos_vector, mos_titles);

@@ -8,7 +8,7 @@ Copyright CSIC 2020
 
 This toolbox allows computing Performance Indicator (PI) within the Irregular Terrain project protocol.
 In particular, margin of stability (MoS), walking ratio (WR), ratio index (RI) and gait parameters variability can be computed.
-The toolbox contains four PI's algorithms.
+The toolbox contains four PIs algorithms.
 
 ## Installation
 
@@ -28,7 +28,7 @@ pkg load io
 If octave is opened from the repository root, assuming we created before a folder named `output`:
 
 ```octave
-addpath("Margin_stability_octave/src")
+addpath("Margin_Stability_octave/src")
 # For the Margin stability computation
 marginStability_calculation("Margin_Stability_octave/tests/data/input/COM_plano01.csv", "Margin_Stability_octave/tests/data/input/gaitEvents_plano01.csv", "Margin_Stability_octave/tests/data/input/FeetTrajectories_plano01.csv", "Margin_Stability_octave/tests/data/input/Anthropometry.yaml", "output")
 ```
@@ -40,12 +40,32 @@ walkRatio_calculation("Walk_Ratio_octave/tests/data/input/GaitParameters_noExo.y
 
 ```octave
 addpath("Ratio_Index_octave/src/")
-ratioIndex_calcutation("Ratio_Index_octave/tests/data/input/GaitParameters_noExo.yaml", "output")
+ratioIndex_calculation("Ratio_Index_octave/tests/data/input/GaitParameters_noExo.yaml", "output")
 ```
 
 ```octave
 addpath("Variability_octave/src/")
 variability_calculation("Variability_octave/tests/data/input/GaitParameters_exo.yaml", "Variability_octave/tests/data/input/GaitParameters_noExo.yaml")
+```
+
+### Using the scripts
+
+This is tested under linux.
+From the repository root, assuming that folder `output` already exists:
+
+```term
+# for the margin of stability
+./run_pi_margin_stability Margin_Stability_octave/tests/data/input/COM_plano01.csv Margin_Stability_octave/tests/data/input/gaitEvents_plano01.csv Margin_Stability_octave/tests/data/input/FeetTrajectories_plano01.csv Margin_Stability_octave/tests/data/input/Anthropometry.yaml output
+
+# for the walk ratio
+./run_pi_walk_ratio Walk_Ratio_octave/tests/data/input/GaitParameters_noExo.yaml output
+
+# for the ratio index
+./run_pi_ratio_index Ratio_Index_octave/tests/data/input/GaitParameters_noExo.yaml output
+
+# for the variability
+ ./run_pi_variability Variability_octave/tests/data/input/GaitParameters_exo.yaml Variability_octave/tests/data/input/GaitParameters_noExo.yaml output
+
 ```
 
 ## Acknowledgements
@@ -71,24 +91,3 @@ of the information it contains.
 
 [eurobench_logo]: http://eurobench2020.eu/wp-content/uploads/2018/06/cropped-logoweb.png
 [eurobench_website]: http://eurobench2020.eu "Go to website"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

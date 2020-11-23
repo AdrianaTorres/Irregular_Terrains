@@ -1,0 +1,24 @@
+#!/usr/bin/octave -qf
+
+printf ("current directory: %s\n", pwd())
+addpath("Margin_Stability_octave/src")
+arg_list = argv ();
+if nargin != 5
+  printf ("ERROR: There should be 5 args.\n")
+  printf ("- a .csv file containing the COM evolution\n")
+  printf ("- a .yaml file containing the Gait parameters\n")
+  printf ("- a .csv file containing the feet trajectory\n")
+  printf ("- a .yaml file containing subject anthropometric information\n")
+  printf ("- name of an existing folder where results should be stored.\n");
+  printf ("Usage:\n");
+  printf ("\t./run_pi_margin_stability com.csv gait.yaml feet.csv subject.yaml result_dir\n\n");
+  exit(127);
+endif
+
+printf ("COM csv : %s\n", arg_list{1});
+printf ("gait yaml : %s\n", arg_list{2});
+printf ("feet csv : %s\n", arg_list{3});
+printf ("anthropometric yaml: %s\n", arg_list{4});
+printf ("result dir: %s\n", arg_list{5});
+
+marginStability_calculation(arg_list{1}, arg_list{2}, arg_list{3}, arg_list{4}, arg_list{5})
