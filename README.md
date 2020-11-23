@@ -45,7 +45,7 @@ ratioIndex_calculation("Ratio_Index_octave/tests/data/input/GaitParameters_noExo
 
 ```octave
 addpath("Variability_octave/src/")
-variability_calculation("Variability_octave/tests/data/input/GaitParameters_exo.yaml", "Variability_octave/tests/data/input/GaitParameters_noExo.yaml")
+variability_calculation("Variability_octave/tests/data/input/GaitParameters_exo.yaml", "Variability_octave/tests/data/input/GaitParameters_noExo.yaml", "output")
 ```
 
 ### Using the scripts
