@@ -1,0 +1,20 @@
+#!/usr/bin/octave -qf
+
+printf ("current directory: %s\n", pwd())
+addpath("Variability_octave/src")
+arg_list = argv ();
+if nargin != 3
+  printf ("ERROR: There should be 3 args.\n")
+  printf ("- a .yaml file containing the gait parameters with the exo\n")
+  printf ("- a .yaml file containing the gait parameters without the exo\n")
+  printf ("- name of an existing folder where results should be stored.\n");
+  printf ("Usage:\n");
+  printf ("\t./run_pi_variability event.yaml event_no_exo.yaml result_dir\n\n");
+  exit(127);
+endif
+
+printf ("gait yaml : %s\n", arg_list{1});
+printf ("no exo gait yaml : %s\n", arg_list{2});
+printf ("result dir: %s\n", arg_list{3});
+
+variability_calculation(arg_list{1}, arg_list{2}, arg_list{3})

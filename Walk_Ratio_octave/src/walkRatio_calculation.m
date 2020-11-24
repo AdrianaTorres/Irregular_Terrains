@@ -39,7 +39,6 @@ doubleSupport = str2double(doubleSupport);
 
 gaitParameters = [left_cadence, left_walkingSpeed, left_strideTime, left_stepTime, left_strideLength, left_stepLength, left_stepWidth, left_singleSupport, rigth_cadence,rigth_walkingSpeed, rigth_strideTime, rigth_stepTime, rigth_strideLength, rigth_stepLength, rigth_stepWidth, rigth_singleSupport, doubleSupport];
 
-
 #Walk ratio calculation.
 left_walkRatio = walkRatio(gaitParameters(6), gaitParameters(1));
 rigth_walkRatio = walkRatio(gaitParameters(14), gaitParameters(9));
@@ -52,17 +51,3 @@ wr_data = [rigth_walkRatio, left_walkRatio];
 filename = strcat(outputFolder, "/", "WalkingRatio", ".yaml")
 
 store_result(filename, wr, wr_data, wr_title);
-
-
-
-
-
-
-
-
-
-
-
-
-
-  

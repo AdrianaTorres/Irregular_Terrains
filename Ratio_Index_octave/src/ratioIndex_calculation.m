@@ -55,17 +55,3 @@ ri_title = "'cadence', 'walking_speed', 'stride_time', 'step_time', 'stride_leng
 filename = strcat(outputFolder, "/", "RatioIndex", ".yaml")
 
 store_result(filename, ri, ratio_index, ri_title);
-
-
-
-
-
-
-
-
-
-
-
-
-
-  

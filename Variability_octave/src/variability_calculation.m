@@ -42,7 +42,7 @@ doubleSupport_exo = str2double(doubleSupport_exo);
 gaitParameters_exo = [left_cadence_exo, left_walkingSpeed_exo, left_strideTime_exo, left_stepTime_exo, left_strideLength_exo, left_stepLength_exo, left_stepWidth_exo, left_singleSupport_exo, rigth_cadence_exo,rigth_walkingSpeed_exo, rigth_strideTime_exo, rigth_stepTime_exo, rigth_strideLength_exo, rigth_stepLength_exo, rigth_stepWidth_exo, rigth_singleSupport_exo, doubleSupport_exo];
 
 #Extract data (no exoskeleton) from input.
-file2 = "GaitParameters_noExo.yaml";
+# file2 = "GaitParameters_noExo.yaml";
 
 data_noExo = read_simple_yaml(file2);
 
