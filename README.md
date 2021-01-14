@@ -29,22 +29,26 @@ If octave is opened from the repository root, assuming we created before a folde
 
 ```octave
 addpath("Margin_Stability_octave/src")
+addpath("Tools/src")
 # For the Margin stability computation
 marginStability_calculation("Margin_Stability_octave/tests/data/input/COM_plano01.csv", "Margin_Stability_octave/tests/data/input/gaitEvents_plano01.csv", "Margin_Stability_octave/tests/data/input/FeetTrajectories_plano01.csv", "Margin_Stability_octave/tests/data/input/Anthropometry.yaml", "output")
 ```
 
 ```octave
 addpath("Walk_Ratio_octave/src")
+addpath("Tools/src")
 walkRatio_calculation("Walk_Ratio_octave/tests/data/input/GaitParameters_noExo.yaml", "output")
 ```
 
 ```octave
 addpath("Ratio_Index_octave/src/")
+addpath("Tools/src")
 ratioIndex_calculation("Ratio_Index_octave/tests/data/input/GaitParameters_noExo.yaml", "output")
 ```
 
 ```octave
 addpath("Variability_octave/src/")
+addpath("Tools/src")
 variability_calculation("Variability_octave/tests/data/input/GaitParameters_exo.yaml", "Variability_octave/tests/data/input/GaitParameters_noExo.yaml", "output")
 ```
 
