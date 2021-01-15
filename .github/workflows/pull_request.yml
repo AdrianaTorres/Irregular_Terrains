@@ -32,5 +32,5 @@ jobs:
         TEST_PLAN: test_plan.xml
         # not accepted as the repo contains uppercase letters
         #DOCKER_IMAGE: ${{ github.event.repository.name }}:${{ github.head_ref }}
-        DOCKER_IMAGE = pi_csic_irregular:${{ github.head_ref }}
+        DOCKER_IMAGE: pi_csic_irregular:${{ github.head_ref }}
       run: python3 test_docker_call.py
