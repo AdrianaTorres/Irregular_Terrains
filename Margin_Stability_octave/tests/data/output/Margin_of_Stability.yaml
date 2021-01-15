@@ -1,2 +1,3 @@
-Margin of Stability:
-[['Right Medial Margin of Stability', 'Right Lateral Margin of Stability', 'Right Anterior Margin of Stability', 'Right Posterior Margin of Stability', 'Left Medial Margin of Stability', 'Left Lateral Margin of Stability', 'Left Anterior Margin of Stability', 'Left Posterior Margin of Stability'], [1201.45270, 1115.63015, 1152.91184, 1217.39770, 1014.46700, 928.56238, 972.78137, 1001.23168]]
+type: 'vector'
+label: ['Right Medial Margin of Stability', 'Right Lateral Margin of Stability', 'Right Anterior Margin of Stability', 'Right Posterior Margin of Stability', 'Left Medial Margin of Stability', 'Left Lateral Margin of Stability', 'Left Anterior Margin of Stability', 'Left Posterior Margin of Stability']
+value: [1201.45270, 1115.63015, 1152.91184, 1217.39770, 1014.46700, 928.56238, 972.78137, 1001.23168]
