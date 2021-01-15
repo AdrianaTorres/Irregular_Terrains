@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_plan>
+<test pi_name="./run_pi_margin_stability"
+      parameters="/in/COM_plano01.csv /in/gaitEvents_plano01.csv /in/FeetTrajectories_plano01.csv /in/Anthropometry.yaml /out"
+      input_folder="Margin_Stability_octave/tests/data/input"
+      output_folder="Margin_Stability_octave/tests/data/output"/>
+<test pi_name="./run_pi_walk_ratio"
+      parameters="/in/GaitParameters_noExo.yaml /out"
+      input_folder="Walk_Ratio_octave/tests/data/input"
+      output_folder="Walk_Ratio_octave/tests/data/output"/>
+<test pi_name="./run_pi_ratio_index"
+      parameters="/in/GaitParameters_noExo.yaml /out"
+      input_folder="Ratio_Index_octave/tests/data/input"
+      output_folder="Ratio_Index_octave/tests/data/output"/>
+<test pi_name="./run_pi_variability"
+      parameters="/in/GaitParameters_exo.yaml /in/GaitParameters_noExo.yaml /out"
+      input_folder="Variability_octave/tests/data/input"
+      output_folder="Variability_octave/tests/data/output"/>
+</test_plan>
