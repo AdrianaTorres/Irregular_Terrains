@@ -2,6 +2,8 @@
 
 printf ("current directory: %s\n", pwd())
 addpath("Margin_Stability_octave/src")
+addpath("Tools/src")
+
 arg_list = argv ();
 if nargin != 5
   printf ("ERROR: There should be 5 args.\n")
