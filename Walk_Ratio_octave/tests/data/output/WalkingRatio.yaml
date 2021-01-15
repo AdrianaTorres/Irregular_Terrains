@@ -1,2 +1,3 @@
-Walking ratio:
-[['right', 'left'], [4.69580, 4.83765]]
+type: 'vector'
+label: 'Right Walk Ratio', 'Left Walk Ratio'
+value: [4.69580, 4.83765]
