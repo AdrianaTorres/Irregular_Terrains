@@ -42,13 +42,13 @@ leftABoS = ft(1:end, 5);
 leftPBoS = ft(1:end, 11);
 
 
-ant = read_simple_yaml(file4);
-rightLegLength = ant{11,1}; 
-rightLegLength = str2num(rightLegLength);
-leftLegLength = ant{4,1};
+ant = read_simple_yaml(file4)
+rightLegLength = ant{10,1}
+rightLegLength = str2num(rightLegLength)
+leftLegLength = ant{3,1};
 leftLegLength = str2num(leftLegLength);
 
-#Get the CoM, CoM velocity and BoS at heel strike. 
+#Get the CoM, CoM velocity and BoS at heel strike.
 right_com = [];
 left_com = [];
 right_vel_com = [];
@@ -57,7 +57,7 @@ left_vel_com = [];
 for i = 1:size(time_com)
   for j = 1:size(right_heelStrike)(2)
     if (right_heelStrike(j) != 0 && right_heelStrike(j) == time_com(i))
-      right_com = [right_com com(i)];  
+      right_com = [right_com com(i)];
       right_vel_com = [right_vel_com vel_com(i)];
     endif
   endfor
@@ -66,8 +66,8 @@ endfor
 
 for i = 1:size(time_com)
   for j = 1:size(left_heelStrike)(2)
-    if (left_heelStrike(j) != 0 && left_heelStrike(j) == time_com(i)) 
-      left_com = [left_com com(i)];  
+    if (left_heelStrike(j) != 0 && left_heelStrike(j) == time_com(i))
+      left_com = [left_com com(i)];
       left_vel_com = [left_vel_com vel_com(i)];
     endif
   endfor
@@ -86,7 +86,7 @@ left_PBoS = [];
 for i = 1:size(time_ft)
   for j = 1:size(right_heelStrike)(2)
     if (right_heelStrike(j) == time_ft(i))
-      right_MBoS = [right_MBoS rightMBoS(i)];  
+      right_MBoS = [right_MBoS rightMBoS(i)];
     endif
   endfor
 endfor
@@ -94,7 +94,7 @@ endfor
 for i = 1:size(time_ft)
   for j = 1:size(right_heelStrike)(2)
     if (right_heelStrike(j) == time_ft(i))
-      right_LBoS = [right_LBoS rightLBoS(i)];  
+      right_LBoS = [right_LBoS rightLBoS(i)];
     endif
   endfor
 endfor
@@ -102,7 +102,7 @@ endfor
 for i = 1:size(time_ft)
   for j = 1:size(right_heelStrike)(2)
     if (right_heelStrike(j) == time_ft(i))
-      right_ABoS = [right_ABoS rightABoS(i)];  
+      right_ABoS = [right_ABoS rightABoS(i)];
     endif
   endfor
 endfor
@@ -110,7 +110,7 @@ endfor
 for i = 1:size(time_ft)
   for j = 1:size(right_heelStrike)(2)
     if (right_heelStrike(j) == time_ft(i))
-      right_PBoS = [right_PBoS rightPBoS(i)];  
+      right_PBoS = [right_PBoS rightPBoS(i)];
     endif
   endfor
 endfor
@@ -118,7 +118,7 @@ endfor
 for i = 1:size(time_ft)
   for j = 1:size(left_heelStrike)(2)
     if (left_heelStrike(j) == time_ft(i))
-      left_MBoS = [left_MBoS leftMBoS(i)];  
+      left_MBoS = [left_MBoS leftMBoS(i)];
     endif
   endfor
 endfor
@@ -126,7 +126,7 @@ endfor
 for i = 1:size(time_ft)
   for j = 1:size(left_heelStrike)(2)
     if (left_heelStrike(j) == time_ft(i))
-      left_LBoS = [left_LBoS leftLBoS(i)];  
+      left_LBoS = [left_LBoS leftLBoS(i)];
     endif
   endfor
 endfor
@@ -134,7 +134,7 @@ endfor
 for i = 1:size(time_ft)
   for j = 1:size(left_heelStrike)(2)
     if (left_heelStrike(j) == time_ft(i))
-      left_ABoS = [left_ABoS leftABoS(i)];  
+      left_ABoS = [left_ABoS leftABoS(i)];
     endif
   endfor
 endfor
@@ -142,7 +142,7 @@ endfor
 for i = 1:size(time_ft)
   for j = 1:size(left_heelStrike)(2)
     if (left_heelStrike(j) == time_ft(i))
-      left_PBoS = [left_PBoS leftPBoS(i)];  
+      left_PBoS = [left_PBoS leftPBoS(i)];
     endif
   endfor
 endfor

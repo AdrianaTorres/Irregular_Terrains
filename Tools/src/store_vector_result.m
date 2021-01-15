@@ -12,9 +12,8 @@ function is_ok = store_vector_result(filename, data, labels)
 
     file_id = fopen(filename, "w");
     fprintf(file_id, "type: 'vector'\n");
-    
-    
-    fprintf(file_id, "label: %s\n", labels);
+
+    fprintf(file_id, "label: [%s]\n", labels);
     value_str = sprintf("value: [");
     fprintf(file_id, value_str);
     for i = 1:size(data)(2)
@@ -26,8 +25,8 @@ function is_ok = store_vector_result(filename, data, labels)
         fprintf(file_id, value_str);
         endif
     endfor
-    
-    
+
+
     fclose(file_id);
     is_ok = true;
 end

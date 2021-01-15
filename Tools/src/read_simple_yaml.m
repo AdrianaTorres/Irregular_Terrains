@@ -15,8 +15,8 @@ function values = read_simple_yaml(filename)
     spec = "%s %s";
     infile = textscan(fid, spec, 'Delimiter', ':');
 
-    labels = infile{1};
-    values = infile{2};
+    labels = infile{1}
+    values = infile{2}
     
     fclose(fid);
 end

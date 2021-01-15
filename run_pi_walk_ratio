@@ -2,6 +2,8 @@
 
 printf ("current directory: %s\n", pwd())
 addpath("Walk_Ratio_octave/src")
+addpath("Tools/src")
+
 arg_list = argv ();
 if nargin != 2
   printf ("ERROR: There should be 2 args.\n")
