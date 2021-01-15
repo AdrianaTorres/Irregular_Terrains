@@ -72,6 +72,32 @@ From the repository root, assuming that folder `output` already exists:
 
 ```
 
+## Docker usage
+
+Under Linux, one can generate the Docker image using:
+
+```term
+docker build . -t pi_csic_irregular
+```
+
+Assuming  folder `output` is already created (to contain output files):
+
+```shell
+# For the Margin of stability:
+docker run --rm -v $PWD/Margin_Stability_octave/tests/data/input:/in -v $PWD/output:/out pi_csic_irregular ./run_pi_margin_stability /in/COM_plano01.csv /in/gaitEvents_plano01.csv /in/FeetTrajectories_plano01.csv /in/Anthropometry.yaml /out
+
+
+# for the walk ratio
+docker run --rm -v $PWD/Walk_Ratio_octave/tests/data/input:/in -v $PWD/output:/out pi_csic_irregular ./run_pi_walk_ratio /in/GaitParameters_noExo.yaml /out
+
+# for the ratio index
+docker run --rm -v $PWD/Ratio_Index_octave/tests/data/input:/in -v $PWD/output:/out pi_csic_irregular ./run_pi_ratio_index /in/GaitParameters_noExo.yaml /out
+
+# for the variability
+ docker run --rm -v $PWD/Variability_octave/tests/data/input:/in -v $PWD/output:/out pi_csic_irregular ./run_pi_variability /in/GaitParameters_exo.yaml /in/GaitParameters_noExo.yaml /out
+
+```
+
 ## Acknowledgements
 
 <a href="http://eurobench2020.eu">
