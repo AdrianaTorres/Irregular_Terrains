@@ -93,7 +93,7 @@ endfor
 #Put the results into a file.
 filename = strcat(outputFolder, "/", "Variability", ".yaml");
 
-v_labels = "'left_cadence', 'left_walking_speed', 'left_stride_time', 'left_step_time', 'left_stride_length', 'left_step_length', 'left_step_width', 'left_single_support', 'rigth_cadence', 'rigth_walking_speed', 'rigth_stride_time', 'rigth_step_time', 'rigth_stride_length', 'rigth_step_length', 'rigth_step_width', 'rigth_single_support'";
+v_labels = "'left_cadence', 'left_walking_speed', 'left_stride_time', 'left_step_time', 'left_stride_length', 'left_step_length', 'left_step_width', 'left_single_support', 'rigth_cadence', 'rigth_walking_speed', 'rigth_stride_time', 'rigth_step_time', 'rigth_stride_length', 'rigth_step_length', 'rigth_step_width', 'rigth_single_support', 'double_support'";
 
 variability = store_vector_result(filename, variability_vector, v_labels);
 
