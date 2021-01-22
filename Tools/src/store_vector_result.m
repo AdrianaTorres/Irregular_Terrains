@@ -15,17 +15,14 @@ function is_ok = store_vector_result(filename, data, labels)
 
     fprintf(file_id, "label: [%s]\n", labels);
     value_str = sprintf("value: [");
-    fprintf(file_id, value_str);
     for i = 1:size(data)(2)
-        if (i==size(data)(2))
-          value_str = sprintf("%.5f]\n", data(i));
-          fprintf(file_id, value_str);
-        else
-        value_str = sprintf("%.5f, ", data(i));
-        fprintf(file_id, value_str);
+        value_str = sprintf("%s%.5f", value_str, data(i));
+        if (i!=size(data)(2))
+          value_str = sprintf("%s, ", value_str);
         endif
     endfor
-
+    value_str = sprintf("%s]\n", value_str);
+    fprintf(file_id, value_str);
 
     fclose(file_id);
     is_ok = true;
