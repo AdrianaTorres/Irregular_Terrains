@@ -44,7 +44,7 @@ left_walkRatio = walkRatio(gaitParameters(6), gaitParameters(1));
 rigth_walkRatio = walkRatio(gaitParameters(14), gaitParameters(9));
 
 #Put the results into a file.
-filename = strcat(outputFolder, "/", "WalkRatio", ".yaml");
+filename = strcat(outputFolder, "/", "walking_ratio", ".yaml");
 
 wr_labels = "'Right Walk Ratio', 'Left Walk Ratio'";
 wr_data = [rigth_walkRatio, left_walkRatio];

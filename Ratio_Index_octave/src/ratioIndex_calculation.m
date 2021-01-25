@@ -49,7 +49,7 @@ for i=1:((size(gaitParameters) (2) - 1)/2)
 endfor
 
 #Put the results into a file.
-filename = strcat(outputFolder, "/", "RatioIndex", ".yaml");
+filename = strcat(outputFolder, "/", "ratio_index", ".yaml");
 
 ri_labels = "'cadence', 'walking_speed', 'stride_time', 'step_time', 'stride_length', 'step_length', 'step_width', 'single_support'";
 
