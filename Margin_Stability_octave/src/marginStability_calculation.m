@@ -168,7 +168,7 @@ leftPMoS = marginOfStability(leftLegLength, left_PBoS, left_com, left_vel_com);
 leftPMoS = sum(leftPMoS)/length(leftPMoS)
 
 #Put the results into a file.
-filename = strcat(outputFolder, "/", "MarginStability", ".yaml");
+filename = strcat(outputFolder, "/", "margin_stability", ".yaml");
 
 mos_labels = "'Right Medial Margin of Stability', 'Right Lateral Margin of Stability', 'Right Anterior Margin of Stability', 'Right Posterior Margin of Stability', 'Left Medial Margin of Stability', 'Left Lateral Margin of Stability', 'Left Anterior Margin of Stability', 'Left Posterior Margin of Stability'";
 mos_vector = [rightMMoS, rightLMoS, rightAMoS, rightPMoS, leftMMoS, leftLMoS, leftAMoS, leftPMoS];
